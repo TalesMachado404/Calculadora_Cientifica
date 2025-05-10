@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         val btnDividir = findViewById<Button>(R.id.btnDividir)
         val btnPonto = findViewById<Button>(R.id.btnPonto)
         val btnIgual = findViewById<Button>(R.id.btnIgual)
+        val btnMC = findViewById<Button>(R.id.btnMC)
         val btnMRC = findViewById<Button>(R.id.btnMRC)
         val btnMMAIS = findViewById<Button>(R.id.btnMMais)
         val btnMMenos = findViewById<Button>(R.id.btnMMenos)
@@ -137,6 +138,11 @@ class MainActivity : AppCompatActivity() {
         btnMRC.setOnClickListener {
             display.setText(MR.toString())
 
+        }
+
+        btnMC.setOnClickListener {
+            MR = 0.0
+            display.text ="0"
         }
 
         btnMMAIS.setOnClickListener {
