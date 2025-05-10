@@ -23,7 +23,11 @@ class MainActivity : AppCompatActivity() {
         var temp2 = 0.0
         var operacao = 0
         var result = 0.0
+
+        /*O display da tela*/
         val display = findViewById<TextView>(R.id.display)
+
+        /*Botões de 0 a 9 e outos*/
         val btn1 = findViewById<Button>(R.id.btn1)
         val btn2 = findViewById<Button>(R.id.btn2)
         val btn3 = findViewById<Button>(R.id.btn3)
@@ -34,17 +38,42 @@ class MainActivity : AppCompatActivity() {
         val btn8 = findViewById<Button>(R.id.btn8)
         val btn9 = findViewById<Button>(R.id.btn9)
         val btn0 = findViewById<Button>(R.id.btn0)
+        val btnPI = findViewById<Button>(R.id.btnPI)
+        val btnE = findViewById<Button>(R.id.btnE)
+        val pi = String.format("%.4f", Math.PI)
+        val e = String.format("%.4f", Math.E)
+
+
+        /*Operadores*/
         val btnMultiplicar = findViewById<Button>(R.id.btnMultiplicar)
         val btnMais = findViewById<Button>(R.id.btnMais)
         val btnMenos = findViewById<Button>(R.id.btnMenos)
         val btnDividir = findViewById<Button>(R.id.btnDividir)
+
+        /*Operadores no display*/
+        val btnPORC = findViewById<Button>(R.id.btnPORC)
+
+        /*PONTO*/
         val btnPonto = findViewById<Button>(R.id.btnPonto)
+
+        /*Botão de igual*/
         val btnIgual = findViewById<Button>(R.id.btnIgual)
+
+        /*Manipuladores de Memoria*/
         val btnMC = findViewById<Button>(R.id.btnMC)
         val btnMRC = findViewById<Button>(R.id.btnMRC)
         val btnMMAIS = findViewById<Button>(R.id.btnMMais)
         val btnMMenos = findViewById<Button>(R.id.btnMMenos)
+
+        /*Tipos de delete*/
         val btnCE = findViewById<Button>(R.id.btnCE)
+        val btnDLT = findViewById<Button>(R.id.btnDLT)
+
+
+
+        /*----------------------------------------------------------------------------------------------------*/
+
+
         btn0.setOnClickListener {
             if(!display.text.toString().equals("0"))
                 display.setText(display.text.toString().plus("0"))
@@ -123,16 +152,49 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        btnPI.setOnClickListener {
+                display.setText(pi)
+        }
+
+        btnE.setOnClickListener {
+                display.setText(e)
+        }
+
+
+        /*----------------------------------------------------------------------------------------------------*/
+
 
         btnCE.setOnClickListener {
             display.setText("0")
         }
+
+        fun apagarUltimoCaractere(display: TextView) {
+            val textoAtual = display.text.toString()
+            if (textoAtual.isNotEmpty() && textoAtual != "0") {
+                val novoTexto = textoAtual.dropLast(1)
+                display.text = if (novoTexto.isEmpty()) "0" else novoTexto
+            }
+        }
+
+        btnDLT.setOnClickListener{
+            apagarUltimoCaractere(display)
+        }
+
+
+
+
+        /*----------------------------------------------------------------------------------------------------*/
+
 
         btnPonto.setOnClickListener {
             if(!display.text.toString().contains("."))
                 display.setText(display.text.toString().plus("."))
 
         }
+
+
+        /*----------------------------------------------------------------------------------------------------*/
+
 
 
         btnMRC.setOnClickListener {
@@ -156,6 +218,17 @@ class MainActivity : AppCompatActivity() {
             display.setText("0")
 
         }
+
+
+        /*----------------------------------------------------------------------------------------------------*/
+
+
+        btnPORC.setOnClickListener {
+
+        }
+
+        /*----------------------------------------------------------------------------------------------------*/
+
 
         btnMais.setOnClickListener {
             temp1 = display.text.toString().toDouble()
