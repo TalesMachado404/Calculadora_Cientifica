@@ -183,8 +183,11 @@ class MainActivity : AppCompatActivity() {
             when(operacao) {
                 1 -> result = temp1 + temp2
                 2 -> result = temp1 - temp2
+                3 -> result = temp1 * temp2
+                4 -> if (temp2 != 0.0) temp1 / temp2 else Double.NaN
+                else -> 0.0
             }
-
+            display.text = if (result.isNaN()) "Erro" else result.toString()
         }
     }
 }
