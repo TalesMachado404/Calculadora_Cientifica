@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import kotlin.math.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,11 +55,18 @@ class MainActivity : AppCompatActivity() {
         val btnPORC = findViewById<Button>(R.id.btnPORC)
         val btnFatorial = findViewById<Button>(R.id.btnFatorial)
         val btnRaizQ = findViewById<Button>(R.id.btnRaizQ)
+        val btnLog = findViewById<Button>(R.id.btnlog)
 
         /*Exponenciais*/
         val btnEXPOG = findViewById<Button>(R.id.btnEXPOG)
         val btnEXPON = findViewById<Button>(R.id.btnEXPON)
         val btnEXPOD = findViewById<Button>(R.id.btnEXPOD)
+
+        /*Angulos*/
+        val btnCOS = findViewById<Button>(R.id.btnCOS)
+        val btnSIN = findViewById<Button>(R.id.btnSIN)
+        val btnTAN = findViewById<Button>(R.id.btnTAN)
+
 
         /*PONTO*/
         val btnPonto = findViewById<Button>(R.id.btnPonto)
@@ -300,6 +308,51 @@ class MainActivity : AppCompatActivity() {
                 display.text = "Erro"
             }
         }
+
+        btnLog.setOnClickListener {
+            try {
+                val value = display.text.toString().toDouble()
+                val result = if (value > 0) log10(value) else Double.NaN
+                display.text = if (result.isNaN()) "Erro" else result.toString()
+            } catch (e: Exception) {
+                display.text = "Erro"
+            }
+        }
+
+
+        /*----------------------------------------------------------------------------------------------------*/
+
+
+        btnCOS.setOnClickListener {
+            try {
+                val value = display.text.toString().toDouble()
+                val result = cos(Math.toRadians(value))
+                display.text = result.toString()
+            } catch (e: Exception) {
+                display.text = "Erro"
+            }
+        }
+
+        btnSIN.setOnClickListener {
+            try {
+                val value = display.text.toString().toDouble()
+                val result = sin(Math.toRadians(value))
+                display.text = result.toString()
+            } catch (e: Exception) {
+                display.text = "Erro"
+            }
+        }
+
+        btnTAN.setOnClickListener {
+            try {
+                val value = display.text.toString().toDouble()
+                val result = tan(Math.toRadians(value))
+                display.text = result.toString()
+            } catch (e: Exception) {
+                display.text = "Erro"
+            }
+        }
+
 
         /*----------------------------------------------------------------------------------------------------*/
 
