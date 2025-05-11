@@ -52,6 +52,13 @@ class MainActivity : AppCompatActivity() {
 
         /*Operadores no display*/
         val btnPORC = findViewById<Button>(R.id.btnPORC)
+        val btnFatorial = findViewById<Button>(R.id.btnFatorial)
+        val btnRaizQ = findViewById<Button>(R.id.btnRaizQ)
+
+        /*Exponenciais*/
+        val btnEXPOG = findViewById<Button>(R.id.btnEXPOG)
+        val btnEXPON = findViewById<Button>(R.id.btnEXPON)
+        val btnEXPOD = findViewById<Button>(R.id.btnEXPOD)
 
         /*PONTO*/
         val btnPonto = findViewById<Button>(R.id.btnPonto)
@@ -223,8 +230,75 @@ class MainActivity : AppCompatActivity() {
         /*----------------------------------------------------------------------------------------------------*/
 
 
-        btnPORC.setOnClickListener {
+        btnEXPOG.setOnClickListener {
+            temp1 = display.text.toString().toDouble()
+            operacao = 5
+            display.setText("0")
+        }
 
+        btnEXPON.setOnClickListener {
+            val value = display.text.toString().toDoubleOrNull()
+
+            if (value != null) {
+                val result = Math.exp(value)
+                display.text = String.format("%.4f", result)
+            } else {
+                display.text = "Erro"
+            }
+        }
+
+        btnEXPOD.setOnClickListener {
+            val value = display.text.toString().toDoubleOrNull()
+
+            if (value != null) {
+                val result = Math.pow(10.0, value)
+                display.text = result.toString()
+            } else {
+                display.text = "Erro"
+            }
+        }
+
+
+
+        /*----------------------------------------------------------------------------------------------------*/
+
+
+        btnFatorial.setOnClickListener {
+            val value = display.text.toString().toIntOrNull()
+
+            if (value != null && value >= 0) {
+                var result = 1
+                for (i in 1..value) {
+                    result *= i
+                }
+                display.text = result.toString()
+            } else {
+                display.text = "Erro"
+            }
+        }
+
+
+        btnRaizQ.setOnClickListener {
+            val value = display.text.toString().toDoubleOrNull()
+
+            if (value != null) {
+                val result = Math.sqrt(value)
+                display.text = result.toString()
+            } else {
+                display.text = "Erro"
+            }
+        }
+
+
+        btnPORC.setOnClickListener {
+            val text = display.text.toString()
+            if (text.isNotEmpty() && text.toDoubleOrNull() != null) {
+                val current = text.toDouble()
+                val result = temp1 * current / 100
+                display.text = result.toString()
+            } else {
+                display.text = "Erro"
+            }
         }
 
         /*----------------------------------------------------------------------------------------------------*/
@@ -263,7 +337,8 @@ class MainActivity : AppCompatActivity() {
                 1 -> result = temp1 + temp2
                 2 -> result = temp1 - temp2
                 3 -> result = temp1 * temp2
-                4 -> if (temp2 != 0.0) temp1 / temp2 else Double.NaN
+                4 -> result = if (temp2 != 0.0) temp1 / temp2 else Double.NaN
+                5 -> result = Math.pow(temp1, temp2)
                 else -> 0.0
             }
             display.text = if (result.isNaN()) "Erro" else result.toString()

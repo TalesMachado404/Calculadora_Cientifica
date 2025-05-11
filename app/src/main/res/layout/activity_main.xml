@@ -81,58 +81,6 @@
             android:textSize="15dp" />
 
     </TableRow>
-/*Essa parte se refere ao PI, Euler, CE, DLT e %*/
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0">
-
-        <Button
-            android:id="@+id/btnPORC"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="1dp"
-            android:layout_weight="1"
-            android:text="%"
-            android:textSize="25dp" />
-
-        <Button
-            android:id="@+id/btnPI"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="1dp"
-            android:layout_weight="1"
-            android:text="π"
-            android:textSize="25dp" />
-
-        <Button
-            android:id="@+id/btnE"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="1dp"
-            android:layout_weight="1"
-            android:text="E"
-            android:textSize="25dp" />
-
-        <Button
-            android:id="@+id/btnCE"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="1dp"
-            android:layout_weight="1"
-            android:text="CE"
-            android:textSize="20dp" />
-
-        <Button
-            android:id="@+id/btnDLT"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="1dp"
-            android:layout_weight="1"
-            android:text="DLT"
-            android:textSize="17dp" />
-
-    </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
@@ -141,41 +89,103 @@
 
 
         <Button
-            android:id="@+id/btn7"
+            android:id="@+id/btnFatorial"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
-            android:text="7"
+            android:text="x!"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnRaizQ"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="√x"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnEXPOD"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="10^x"
+            android:textSize="13dp" />
+
+        <Button
+            android:id="@+id/btnEXPON"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="e^x"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/btnEXPOG"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="x^y"
+            android:textSize="16dp" />
+
+
+    </TableRow>
+
+/*Essa parte se refere ao PI, Euler, CE, DLT e %*/
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btnPORC"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="%"
             android:textSize="25dp" />
 
         <Button
-            android:id="@+id/btn8"
+            android:id="@+id/btnPI"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
-            android:text="8"
+            android:text="π"
             android:textSize="25dp" />
 
         <Button
-            android:id="@+id/btn9"
+            android:id="@+id/btnE"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
-            android:text="9"
+            android:text="E"
             android:textSize="25dp" />
 
         <Button
-            android:id="@+id/btnDividir"
+            android:id="@+id/btnCE"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
-            android:text="/"
-            android:textSize="25dp" />
+            android:text="CE"
+            android:textSize="20dp" />
 
+        <Button
+            android:id="@+id/btnDLT"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="DLT"
+            android:textSize="16dp" />
 
     </TableRow>
 
