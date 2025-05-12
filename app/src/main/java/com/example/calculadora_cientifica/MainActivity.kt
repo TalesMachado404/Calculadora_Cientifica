@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import kotlin.math.*
+import kotlin.math.abs
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,6 +57,8 @@ class MainActivity : AppCompatActivity() {
         val btnFatorial = findViewById<Button>(R.id.btnFatorial)
         val btnRaizQ = findViewById<Button>(R.id.btnRaizQ)
         val btnLog = findViewById<Button>(R.id.btnlog)
+        val btnABS = findViewById<Button>(R.id.btnABS)
+        val btnQUAD = findViewById<Button>(R.id.btnQUAD)
 
         /*Exponenciais*/
         val btnEXPOG = findViewById<Button>(R.id.btnEXPOG)
@@ -318,6 +321,27 @@ class MainActivity : AppCompatActivity() {
                 display.text = "Erro"
             }
         }
+
+        btnABS.setOnClickListener {
+            val value = display.text.toString().toDoubleOrNull()
+            if (value != null) {
+                val result = abs(value)
+                display.text = result.toString()
+            } else {
+                display.text = "Erro"
+            }
+        }
+
+        btnQUAD.setOnClickListener {
+            val value = display.text.toString().toDoubleOrNull()
+            if (value != null) {
+                val result = value * value
+                display.text = result.toString()
+            } else {
+                display.text = "Erro"
+            }
+        }
+
 
 
         /*----------------------------------------------------------------------------------------------------*/

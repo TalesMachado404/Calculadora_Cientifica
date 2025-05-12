@@ -302,6 +302,14 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
+        <Button
+            android:id="@+id/btnQUAD"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="x²"
+            android:textSize="14sp" />/>
 
         <Button
             android:id="@+id/btnTAN"
@@ -310,7 +318,7 @@
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:text="TAN"
-            android:textSize="14dp" />
+            android:textSize="10dp" />
 
         <Button
             android:id="@+id/btn1"
@@ -319,7 +327,7 @@
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:text="1"
-            android:textSize="25dp" />
+            android:textSize="18dp" />
 
         <Button
             android:id="@+id/btn2"
@@ -328,7 +336,7 @@
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:text="2"
-            android:textSize="25dp" />
+            android:textSize="18dp" />
 
         <Button
             android:id="@+id/btn3"
@@ -337,7 +345,7 @@
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:text="3"
-            android:textSize="25dp" />
+            android:textSize="18dp" />
 
         <Button
             android:id="@+id/btnMenos"
@@ -346,7 +354,7 @@
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:text="-"
-            android:textSize="25dp" />
+            android:textSize="18dp" />
 
 
     </TableRow>
@@ -358,13 +366,22 @@
 
 
         <Button
+            android:id="@+id/btnABS"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="|x|"
+            android:textSize="14sp" />
+
+        <Button
             android:id="@+id/btnlog"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:text="LOG"
-            android:textSize="14dp" />
+            android:textSize="11dp" />
 
         <Button
             android:id="@+id/btn0"
@@ -373,7 +390,7 @@
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:text="0"
-            android:textSize="25dp" />
+            android:textSize="18dp" />
 
         <Button
             android:id="@+id/btnPonto"
@@ -382,7 +399,7 @@
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:text="."
-            android:textSize="25dp" />
+            android:textSize="18dp" />
 
         <Button
             android:id="@+id/btnIgual"
@@ -391,7 +408,7 @@
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:text="="
-            android:textSize="25dp" />
+            android:textSize="18dp" />
 
         <Button
             android:id="@+id/btnMais"
@@ -400,7 +417,7 @@
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:text="+"
-            android:textSize="25dp" />
+            android:textSize="18dp" />
 
 
     </TableRow>
